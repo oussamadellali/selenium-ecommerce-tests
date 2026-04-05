@@ -1,0 +1,298 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-04-05T16:12:51.313Z",
+    "end": "2026-04-05T16:13:33.700Z",
+    "duration": 42387,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7c18ab33-c49c-49ba-b2f7-4cdd4a4d8b0d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94cb5762-9aad-4e48-a9bc-3f66c8ae685f",
+          "title": "Cart Tests",
+          "fullFile": "C:\\Users\\DarkRyder\\Desktop\\selenium-ecommerce-tests\\tests\\cart.test.js",
+          "file": "\\tests\\cart.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Cart Tests\"",
+              "fullTitle": "Cart Tests \"before all\" hook in \"Cart Tests\"",
+              "timedOut": false,
+              "duration": 19021,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver();\nloginPage = new LoginPage(driver);\ninventoryPage = new InventoryPage(driver);",
+              "err": {},
+              "uuid": "8f828dc5-e121-461b-98e7-11c2b9bae568",
+              "parentUUID": "94cb5762-9aad-4e48-a9bc-3f66c8ae685f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Cart Tests\"",
+              "fullTitle": "Cart Tests \"after all\" hook in \"Cart Tests\"",
+              "timedOut": false,
+              "duration": 1260,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "ff9418ea-22fa-4f76-a886-16665619be43",
+              "parentUUID": "94cb5762-9aad-4e48-a9bc-3f66c8ae685f",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should add product to cart",
+              "fullTitle": "Cart Tests should add product to cart",
+              "timedOut": false,
+              "duration": 5212,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.open();\nawait loginPage.login('standard_user', 'secret_sauce');\nawait inventoryPage.addFirstProductToCart();\nconst count = await inventoryPage.getCartCount();\nexpect(count).to.equal('1');",
+              "err": {},
+              "uuid": "75da9fde-0cef-4b8d-b439-0fcc935db735",
+              "parentUUID": "94cb5762-9aad-4e48-a9bc-3f66c8ae685f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75da9fde-0cef-4b8d-b439-0fcc935db735"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        },
+        {
+          "uuid": "5e1f27cd-f0a9-42d9-8c78-c1a55902c73c",
+          "title": "Checkout Tests (E2E)",
+          "fullFile": "C:\\Users\\DarkRyder\\Desktop\\selenium-ecommerce-tests\\tests\\checkout.test.js",
+          "file": "\\tests\\checkout.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Checkout Tests (E2E)\"",
+              "fullTitle": "Checkout Tests (E2E) \"before all\" hook in \"Checkout Tests (E2E)\"",
+              "timedOut": false,
+              "duration": 2865,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver();\nloginPage = new LoginPage(driver);\ninventoryPage = new InventoryPage(driver);\ncheckoutPage = new CheckoutPage(driver);",
+              "err": {},
+              "uuid": "97c74e6a-4e38-4012-bd05-3d2798965946",
+              "parentUUID": "5e1f27cd-f0a9-42d9-8c78-c1a55902c73c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Checkout Tests (E2E)\"",
+              "fullTitle": "Checkout Tests (E2E) \"after all\" hook in \"Checkout Tests (E2E)\"",
+              "timedOut": false,
+              "duration": 124,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "032c19fc-a089-453b-b054-c794a9576884",
+              "parentUUID": "5e1f27cd-f0a9-42d9-8c78-c1a55902c73c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should complete checkout successfully",
+              "fullTitle": "Checkout Tests (E2E) should complete checkout successfully",
+              "timedOut": false,
+              "duration": 6389,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.open();\nawait loginPage.login('standard_user', 'secret_sauce');\nawait inventoryPage.addFirstProductToCart();\nawait inventoryPage.goToCart();\nawait checkoutPage.startCheckout();\nawait checkoutPage.fillInformation('Oussama', 'Test', '12345');\nawait checkoutPage.finishCheckout();\nconst message = await checkoutPage.getSuccessMessage();\nexpect(message).to.include('Thank you for your order');",
+              "err": {
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[id=\"first-name\"]\"}\n  (Session info: chrome=146.0.7680.178)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"*[id=\"first-name\"]\"}\n  (Session info: chrome=146.0.7680.178)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:526:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:458:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async toWireValue (node_modules\\selenium-webdriver\\lib\\webdriver.js:149:15)\n    at async C:\\Users\\DarkRyder\\Desktop\\selenium-ecommerce-tests\\node_modules\\selenium-webdriver\\lib\\webdriver.js:195:16\n    at async forEachKey (node_modules\\selenium-webdriver\\lib\\webdriver.js:189:9)\n    at async convertKeys (node_modules\\selenium-webdriver\\lib\\webdriver.js:194:3)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:743:22)\n    at async CheckoutPage.fillInformation (pages\\checkout.page.js:21:9)\n    at async Context.<anonymous> (tests\\checkout.test.js:34:9)",
+                "diff": null
+              },
+              "uuid": "271c6f3a-e74b-44e1-af07-9c3a31468194",
+              "parentUUID": "5e1f27cd-f0a9-42d9-8c78-c1a55902c73c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "271c6f3a-e74b-44e1-af07-9c3a31468194"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6389,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        },
+        {
+          "uuid": "0d879833-6b5c-4bae-b249-aee576ded7b6",
+          "title": "Login Tests",
+          "fullFile": "C:\\Users\\DarkRyder\\Desktop\\selenium-ecommerce-tests\\tests\\login.test.js",
+          "file": "\\tests\\login.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Login Tests\"",
+              "fullTitle": "Login Tests \"before all\" hook in \"Login Tests\"",
+              "timedOut": false,
+              "duration": 3032,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await buildDriver();\nloginPage = new LoginPage(driver);",
+              "err": {},
+              "uuid": "73a46fdb-1b6b-4bfa-9724-04212eb0fb98",
+              "parentUUID": "0d879833-6b5c-4bae-b249-aee576ded7b6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Login Tests\"",
+              "fullTitle": "Login Tests \"after all\" hook in \"Login Tests\"",
+              "timedOut": false,
+              "duration": 116,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "6ecc0f92-96c2-477a-92e0-b6952021fb05",
+              "parentUUID": "0d879833-6b5c-4bae-b249-aee576ded7b6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should login successfully with valid credentials",
+              "fullTitle": "Login Tests should login successfully with valid credentials",
+              "timedOut": false,
+              "duration": 4100,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.open();\nawait loginPage.login('standard_user', 'secret_sauce');\nconst url = await driver.getCurrentUrl();\nexpect(url).to.include('inventory');",
+              "err": {},
+              "uuid": "dcbf84b8-ca58-408d-b81c-2a17b9e49368",
+              "parentUUID": "0d879833-6b5c-4bae-b249-aee576ded7b6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dcbf84b8-ca58-408d-b81c-2a17b9e49368"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4100,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 20000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
